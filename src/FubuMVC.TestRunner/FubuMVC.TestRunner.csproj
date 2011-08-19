@@ -93,11 +93,14 @@
     <Content Include="Content\images\jasmine_favicon.png" />
     <Content Include="Content\scripts\lib\jasmine-html.js" />
     <Content Include="Content\scripts\lib\jasmine.js" />
+    <Content Include="Content\scripts\lib\require.min.js" />
     <Content Include="Content\styles\jasmine.css" />
     <Content Include="Shared\bindings.xml" />
     <Content Include="web.config" />
     <Content Include="testrunner.script.config" />
-    <None Include="Shared\Application.spark" />
+    <None Include="Shared\Application.spark">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Suites\Run.spark" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

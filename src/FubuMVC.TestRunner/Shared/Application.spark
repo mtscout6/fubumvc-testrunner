@@ -1,5 +1,4 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
+﻿<!doctype html>
 <html>
 <head>
     <title><use content="title"/> | Logistics Testing</title>
@@ -9,7 +8,7 @@
 	<use content="scripts"/>
 	<Scripts />
 	<script type="text/javascript">
-        (function() {
+        require({ baseUrl: "/_content/scripts" }, ['SampleModel.spec'], function () {
             var jasmineEnv = jasmine.getEnv();
             jasmineEnv.updateInterval = 1000;
 
@@ -21,20 +20,8 @@
                 return trivialReporter.specFilter(spec);
             };
 
-            var currentWindowOnload = window.onload;
-
-            window.onload = function() {
-                if (currentWindowOnload) {
-                    currentWindowOnload();
-                }
-                execJasmine();
-            };
-
-            function execJasmine() {
-                jasmineEnv.execute();
-            }
-
-        })();
+            jasmineEnv.execute();
+        });
     </script>
 </head>
 <body>
