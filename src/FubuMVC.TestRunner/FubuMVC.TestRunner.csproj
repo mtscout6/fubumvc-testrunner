@@ -92,8 +92,11 @@
     <None Include="packages.config" />
     <Content Include="Content\images\jasmine_favicon.png" />
     <Content Include="Content\scripts\lib\jasmine-html.js" />
+    <Content Include="Content\scripts\lib\jasmine-sinon.js" />
     <Content Include="Content\scripts\lib\jasmine.js" />
     <Content Include="Content\scripts\lib\require.min.js" />
+    <Content Include="Content\scripts\lib\sinon.js" />
+    <Content Include="Content\scripts\specLoader.js" />
     <Content Include="Content\styles\jasmine.css" />
     <Content Include="Shared\bindings.xml" />
     <Content Include="web.config" />
