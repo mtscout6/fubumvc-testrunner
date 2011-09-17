@@ -1,0 +1,8 @@
+require 'albacore'
+require 'find'
+require 'fileutils'
+require 'EHBuild'
+
+jasminerunner :test do |runner|
+  runner.root_spec_dirs << File.dirname(__FILE__)
+end
