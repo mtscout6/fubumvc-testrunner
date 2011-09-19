@@ -1,6 +1,6 @@
 GIT
   remote: git://git.extendhealth.com/build-support/main.git
-  revision: 198835f01b0c3f5b90e2b18d6427380a3f9b4f4d
+  revision: cd8b13555675e41aeb8ab2aed2b874d56447f691
   branch: jasmine
   specs:
     EHBuild (0.0.1)
