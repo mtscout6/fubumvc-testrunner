@@ -1,4 +1,17 @@
-﻿define(['specLoader'], function (specLoader) {
+﻿var nodeRequire = require;
+var require = require('requirejs');
+var define = require.define;
+
+require.config({
+  baseUrl: '../../../FubuMVC.HelloJasmine/Content/scripts',
+  nodeRequire: nodeRequire
+});
+
+console.log(process.cwd());
+
+process.chdir(__dirname);
+
+require(['jasmine-spec-loader', 'sinon'], function (specLoader, sinon) {
     var fakeJStorageSet = sinon.mock({ set: function (key, value) { } });
 
     specLoader.register('sample.spec');

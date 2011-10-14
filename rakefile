@@ -1,0 +1,9 @@
+require 'bundler/setup'
+require 'albacore'
+require 'find'
+require 'fileutils'
+require 'EHBuild'
+
+jasminerunner :test do |runner|
+  runner.root_spec_dirs << File.join(File.dirname(__FILE__), 'src', 'FubuMVC.HelloJasmine.Tests')
+end

@@ -16,9 +16,10 @@ _ReSharper.*
 .fubu-alias
 .fubu-includes
 .fubu-manifest
-
+*.swp
 *.userprefs
 *.pidb
 *.DS_Store
 test-results
 fubu-content
+*.TeamCity.user
