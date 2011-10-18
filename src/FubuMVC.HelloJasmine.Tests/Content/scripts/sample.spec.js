@@ -30,6 +30,12 @@
                 });
             });
 
+            describe('test that will fail', function() {
+              it('should fail', function() {
+                expect(false).toEqual(true);
+              });
+            });
+
             specLoader.completed('sample.spec');
         });
     });
