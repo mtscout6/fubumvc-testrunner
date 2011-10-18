@@ -1,17 +1,4 @@
-﻿var nodeRequire = require;
-var require = require('requirejs');
-var define = require.define;
-
-require.config({
-  baseUrl: '../../../FubuMVC.HelloJasmine/Content/scripts',
-  nodeRequire: nodeRequire
-});
-
-console.log(process.cwd());
-
-process.chdir(__dirname);
-
-require(['jasmine-spec-loader', 'sinon'], function (specLoader, sinon) {
+﻿define(['jasmine-spec-loader', 'sinon'], function (specLoader, sinon) {
     var fakeJStorageSet = sinon.mock({ set: function (key, value) { } });
 
     specLoader.register('sample.spec');
@@ -26,7 +13,7 @@ require(['jasmine-spec-loader', 'sinon'], function (specLoader, sinon) {
             expect(true).toEqual(true);
         });
 
-        require(['sample'], function (sut) {
+        require(['../FubuMVC.HelloJasmine/Content/scripts/sample'], function (sut) {
             describe('when initialized', function () {
                 it('should have defaults', function () {
                     expect(sut.name).toEqual('Hello, World!');
